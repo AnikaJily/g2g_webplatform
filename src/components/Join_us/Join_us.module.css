@@ -1,0 +1,173 @@
+.joinUs {
+  position: relative;
+  background: var(--color-text-light-and-background);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+/* Декор нижнего узла */
+.knot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40px; /* легкий выход за секцию, как в макете */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.knot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-family: var(--font-header);
+  font-size: var(--size-header);
+  font-weight: 400;
+  color: var(--color-text-dark-and-foreground);
+  margin: 0 0 35px 0;
+}
+
+.content {
+  display: flex;
+  gap: 103px;
+  align-items: flex-start;
+}
+
+.introText {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text-dark-and-foreground);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: flex-start; /* чтобы кнопка оставалась по контенту */
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.tag {
+  border: 2px solid var(--color-text-dark-and-foreground);
+  border-radius: 43px;
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text-dark-and-foreground);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 56px;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .introText {
+    font-size: 18px;
+  }
+
+  .rightColumn {
+    width: 100%;
+  }
+
+  .tag {
+    font-size: 18px;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .joinUs {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 42px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .content {
+    gap: 24px;
+    align-items: center;
+  }
+
+  .introText {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .rightColumn {
+    align-items: center;
+  }
+
+  .tagsContainer {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+}
+
+/* Адаптивность для маленьких мобильных */
+@media (max-width: 480px) {
+  .joinUs {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .introText {
+    font-size: 14px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .rightColumn {
+    gap: 16px;
+  }
+
+  .tagsContainer {
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+}
+

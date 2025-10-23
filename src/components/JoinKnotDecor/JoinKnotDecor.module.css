@@ -1,0 +1,21 @@
+.knotWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40px; /* как в макете - легкий выход ниже секции */
+  pointer-events: none;
+}
+
+.knotImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .knotWrapper {
+    display: none;
+  }
+}
+
+

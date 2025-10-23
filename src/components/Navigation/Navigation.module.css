@@ -1,0 +1,50 @@
+/* Адаптивность навигации */
+.pagesContainer {
+  justify-self: center;
+  grid-column: 2;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* фиксированный зазор между пунктами */
+  flex-wrap: wrap;             /* при нехватке места переносим */
+}
+
+
+@media (max-width: 1024px) {
+  :global(.navLink), .navLink {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation { display: none; }
+  .navigation {
+    gap: clamp(12px, 4vw, 24px);
+  }
+  :global(.navLink), .navLink {
+    font-size: 14px;
+  }
+}
+
+.menuButton {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}

@@ -1,0 +1,341 @@
+.domesticViolenceSection {
+  padding: 80px 0;
+  background: var(--color-text-light-and-background);
+  position: relative;
+}
+
+.container {
+  margin-inline: auto;
+  width: 1116px;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  position: relative;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 653px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.sectionTitle {
+  font-family: var(--font-header);
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-text-dark-and-foreground);
+  margin: 0;
+  font-weight: 400;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.descriptionText {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  margin: 0;
+}
+
+.highlight {
+  color: var(--color-pink);
+}
+
+.helpBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 621px;
+  max-width: 100%;
+}
+
+.speechBubbleWrapper {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.speechBubble {
+  background: #dcdcf8;
+  border-radius: 19px;
+  width: 816px;
+  height: 95px;
+  max-width: 100%;
+  padding: 14px 22px 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.speechBubbleTail {
+  position: absolute;
+  left: 30px;
+  top: 100%;
+  width: 24px;
+  height: auto;
+  z-index: 1;
+}
+
+.bubbleText {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 232px;
+}
+
+.iconContainer {
+  width: 66px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.imageContainer {
+  flex-shrink: 0;
+  width: 399px;
+  height: 546px;
+  position: relative;
+  overflow: hidden;
+}
+
+.houseImage {
+  position: absolute;
+  width: 176.56%;
+  height: 129.02%;
+  left: -37.32%;
+  top: -29.02%;
+  background-image: url('/figma-assets/a1023ae19f4fc464efb768984a602b0b7daf2e79.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+}
+
+/* Адаптивность для планшетов и меньше */
+@media (max-width: 1200px) {
+  .content {
+    gap: 50px;
+  }
+  
+  .textContent {
+    max-width: 600px;
+  }
+  
+  .helpBlock {
+    width: 100%;
+  }
+  
+  .bottomRow {
+    gap: 100px;
+  }
+  
+  .imageContainer {
+    width: 350px;
+    height: 480px;
+  }
+}
+
+/* Адаптивность для планшетов в портретной ориентации */
+@media (max-width: 1024px) {
+  .domesticViolenceSection {
+    padding: 60px 0;
+  }
+  
+  .content {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .textContent {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .sectionTitle {
+    font-size: 56px;
+  }
+  
+  .descriptionText,
+  .bubbleText {
+    font-size: 18px;
+  }
+  
+  .helpBlock {
+    width: 100%;
+  }
+  
+  .speechBubble {
+    padding: 14px 22px;
+  }
+  
+  .speechBubbleTail {
+    width: 20px;
+  }
+  
+  .bottomRow {
+    gap: 80px;
+  }
+  
+  .imageContainer {
+    width: 320px;
+    height: 438px;
+    order: -1;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .domesticViolenceSection {
+    padding: 50px 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .textContent {
+    gap: 30px;
+  }
+  
+  .sectionTitle {
+    font-size: 42px;
+  }
+  
+  .description {
+    gap: 16px;
+  }
+  
+  .descriptionText,
+  .bubbleText {
+    font-size: 16px;
+  }
+  
+  .speechBubbleWrapper {
+    margin-bottom: 40px;
+  }
+  
+  .speechBubble {
+    padding: 12px 18px;
+  }
+  
+  .speechBubbleTail {
+    width: 18px;
+    left: 24px;
+  }
+  
+  .bottomRow {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .iconContainer {
+    width: 56px;
+    height: 49px;
+  }
+  
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .imageContainer {
+    width: 280px;
+    height: 383px;
+  }
+}
+
+/* Адаптивность для маленьких мобильных устройств */
+@media (max-width: 480px) {
+  .domesticViolenceSection {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .textContent {
+    gap: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+  }
+  
+  .description {
+    gap: 12px;
+  }
+  
+  .descriptionText,
+  .bubbleText {
+    font-size: 14px;
+  }
+  
+  .speechBubbleWrapper {
+    margin-bottom: 30px;
+  }
+  
+  .speechBubble {
+    padding: 10px 16px;
+  }
+  
+  .speechBubbleTail {
+    width: 16px;
+    left: 20px;
+  }
+  
+  .bottomRow {
+    gap: 12px;
+  }
+  
+  .iconContainer {
+    width: 50px;
+    height: 44px;
+  }
+  
+  .imageContainer {
+    width: 240px;
+    height: 328px;
+  }
+}
+

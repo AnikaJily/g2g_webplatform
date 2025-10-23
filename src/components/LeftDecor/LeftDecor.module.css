@@ -1,0 +1,15 @@
+.decorWrapper {
+  position: absolute;
+  left: var(--page-padding-desktop); 
+  top: 75px;
+}
+
+.vectorIcon {
+  height: 848px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .decorWrapper { display: none; }
+}

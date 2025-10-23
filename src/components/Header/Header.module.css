@@ -1,0 +1,54 @@
+/* Header.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 79px;
+  background: var(--color-text-light-and-background);
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Используется вместе с глобальным .container (у тебя в разметке: <div className="container headerContainer">) */
+.headerContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: clamp(16px, 4.6vw, 80px);
+  height: 100%;
+  /* не добавляем padding-inline здесь — он приходит из .container */
+}
+
+/* Левый слот: логотип (не абсолютный) */
+/* Если у тебя logoContainer в модуле Logo.module.css — он автоматически займет левую колонку */
+.logoWrapper {
+  /* при необходимости можно задать размеры, но позиционировать не нужно */
+  display: flex;
+  align-items: center;
+  margin-left: 0; 
+}
+
+/* Навигация (середина) */
+.navigation {
+  display: flex;
+  gap: clamp(12px, 4vw, 70px);
+  align-items: center;
+  justify-self: center; /* центрируем именно в средней колонке */
+}
+
+/* Правая колонка: кнопка помощи */
+.helpWrapper {
+  display: flex;
+  align-items: center;
+  justify-self: end; /* гарантирует, что элемент будет справа */
+}
+
+/* Адаптация высоты хэдера (упрощено) */
+@media (max-width: 1199px) {
+  .header { height: 70px; }
+}
+@media (max-width: 1023px) {
+  .header { height: 65px; }
+}

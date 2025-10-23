@@ -1,0 +1,53 @@
+:root {
+  /* Цвета */
+  --color-bg: #ffffff;
+  --color-fg: #171717;
+  --color-primary: #4c46fe;
+  --color-primary-hover: #3a35d9;
+  --color-primary-active: #2d2bb3;
+  --color-accent: #ffb8e7;
+  --color-pink: #e969be;
+  
+  /* Отступы */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+
+  
+  /* Сетка */
+  /* --grid-columns: 12;
+  --grid-margin: 198px;
+  --grid-gutter: 20px;
+  --grid-max-width: 1512px; */
+  
+  /* Радиусы */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 17px;
+  
+  /* Типографика */
+  /* --font-family-base: 'Inter', Arial, Helvetica, sans-serif;
+  --font-family-accent: 'FuturaPTCond-Book', 'Inter', sans-serif;
+  
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700; */
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0a0a;
+    --color-fg: #ededed;
+  }
+} */
+
+

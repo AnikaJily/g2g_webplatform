@@ -1,0 +1,75 @@
+.helpButton {
+  position: absolute;
+  background: var(--color-primary);
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--spacing-sm);
+  height: 39px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 27px 8px 27px;
+  border-radius: var(--radius-lg);
+  top: 20px;
+  left: calc(50% + 443.5px);
+  transform: translateX(-50%);
+  width: 229px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.helpButton:hover {
+  background: var(--color-primary-hover);
+}
+
+.helpButton:active {
+  background: var(--color-primary-active);
+}
+
+.helpText {
+  font-family: var(--font-buttons);
+  line-height: 1;
+  font-style: normal;
+  position: relative;
+  flex-shrink: 0;
+  font-size: var(--font-size-xl);
+  color: white;
+  width: 131px;
+  white-space: nowrap;
+}
+
+/* Адаптивность кнопки помощи */
+
+/* Малые десктопы (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .helpButton {
+    height: 35px;
+    width: 200px;
+    top: 17px;
+    left: calc(50% + 350px);
+    padding: 3px 22px 7px 22px;
+    border-radius: 15px;
+  }
+  
+  .helpText {
+    font-size: 20px;
+    width: 115px;
+  }
+}
+
+/* Планшеты в ландшафте (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .helpButton {
+    height: 32px;
+    width: 180px;
+    top: 16px;
+    left: calc(50% + 280px);
+    padding: 2px 18px 6px 18px;
+    border-radius: 14px;
+  }
+  
+  .helpText {
+    font-size: 18px;
+    width: 100px;
+  }
+}

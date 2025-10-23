@@ -1,0 +1,60 @@
+.hero {
+  padding: var(--spacing-xl) 0;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  /* background: greenyellow; */
+  /* Убираем overflow: hidden чтобы изображение могло прижиматься к краю экрана */
+}
+
+
+.content {
+  margin: var(--side-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+  align-items: flex-start;
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
+  /* background: green; */
+
+  /* Ограничиваем ширину текста и даём внутренний отступ от левой декоративной линии */
+  max-width: clamp(280px, 37vw, 520px);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text-dark-and-foreground);
+}
+
+
+.title {
+  font-family: var(--font-header);
+  font-style: italic;                 /* у тебя в макете italic */
+  font-weight: 400;
+  font-size: var(--size-header);      /* адаптивный через clamp в глобале */
+  color: var(--color-text-dark-and-foreground);
+}
+
+
+.highlight {
+  color: var(--color-pink);
+}
+
+
+/* Мобильные адаптивы */
+@media (max-width: 768px) {
+  .hero {
+    overflow: visible;
+  }
+
+  .content {
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+}

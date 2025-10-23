@@ -1,0 +1,29 @@
+.navItem {
+  display: inline-grid;
+  place-items: center;
+  position: relative;
+}
+
+.underlineImage {
+  position: absolute;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.stillImage {
+  opacity: 1;
+}
+
+.stillImage.hidden {
+  opacity: 0;
+}
+
+.loopImage {
+  opacity: 0;
+}
+
+.loopImage.visible {
+  opacity: 1;
+}
+
+/* Дублированные стили удалены - используем основные стили .navLink выше */
