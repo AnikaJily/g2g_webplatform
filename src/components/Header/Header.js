@@ -18,6 +18,5 @@ export default function Header() {
         <HelpButton onClick={handleHelpClick} />
       </div>
     </header>
-
   );
 }

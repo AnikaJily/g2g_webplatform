@@ -38,7 +38,7 @@ export default function AboutHistory() {
           
           <div className={styles.imageContainer}>
             <img 
-              src="https://www.figma.com/api/mcp/asset/0fd10447-f801-40ab-8ad7-182489347de7"
+              src=""
               alt="Группа женщин поддержки"
               className={styles.image}
             />

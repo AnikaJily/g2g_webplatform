@@ -19,6 +19,13 @@
   height: 100%;
 }
 
+.rightButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-self: end;
+}
+
 .logoWrapper {
   display: flex;
   align-items: center;

@@ -1,0 +1,132 @@
+.cartIconButton {
+  position: fixed;
+  top: 110px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.iconCircle {
+  width: 57px;
+  height: 57px;
+  background: var(--color-text-dark-and-foreground);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.cartIconButton:hover .iconCircle {
+  opacity: 0.8;
+}
+
+.cartIcon {
+  width: 30px;
+  height: 34px;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-pink);
+  border-radius: 13px;
+  min-width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.badgeText {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-text-dark-and-foreground);
+  text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 1199px) {
+  .cartIconButton {
+    top: 90px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cartIconButton {
+    top: 85px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cartIconButton {
+    top: 82px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartIconButton {
+    top: 78px;
+    right: 15px;
+  }
+
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cartIcon {
+    width: 26px;
+    height: 30px;
+  }
+
+  .badge {
+    min-width: 24px;
+    height: 24px;
+    padding: 0 7px;
+  }
+
+  .badgeText {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartIconButton {
+    top: 72px;
+    right: 12px;
+  }
+
+  .iconCircle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cartIcon {
+    width: 24px;
+    height: 28px;
+  }
+
+  .badge {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+  }
+
+  .badgeText {
+    font-size: 16px;
+  }
+}
+

@@ -1,6 +1,30 @@
+'use client';
+
 import styles from './MerchProducts.module.css';
 
 export default function MerchProducts() {
+
+  // Функция добавления в корзину
+  const addToCart = (product) => {
+    // Получаем текущую корзину из localStorage
+    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    
+    // Добавляем новый товар
+    const updatedCart = [...currentCart, product];
+    
+    // Сохраняем обновленную корзину
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    
+    // Добавляем анимацию добавления
+    showAddedAnimation();
+  };
+  
+  // Анимация добавления товара
+  const showAddedAnimation = () => {
+    // Можно добавить toast-уведомление здесь
+    console.log('Товар добавлен в корзину!');
+  };
+
   const products = [
     {
       id: 1,
@@ -64,10 +88,14 @@ export default function MerchProducts() {
                 <p className={styles.productDescription}>{product.description}</p>
                 
                 <div className={styles.cardFooter}>
-                  <span className={styles.price}>{product.price}</span>
-                  <button className={styles.buyButton}>
-                    Купить
+                  
+                  <button 
+                    className={styles.buyButton}
+                    onClick={() => addToCart(product)}
+                  >
+                    В корзину
                   </button>
+                  <span className={styles.price}>{product.price}</span>
                 </div>
               </div>
             </div>
