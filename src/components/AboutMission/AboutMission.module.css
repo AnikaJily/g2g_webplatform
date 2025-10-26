@@ -23,21 +23,19 @@
 }
 
 .missionBox {
-  display: inline-grid;
-  grid-template-columns: max-content;
-  grid-template-rows: max-content;
-  justify-items: start;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  line-height: 0;
 }
 
 .backgroundImage {
-  grid-column: 1;
-  grid-row: 1;
+  position: absolute;
   width: 668px;
   height: 477px;
   margin: 0;
   max-width: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .decorImage {
@@ -46,17 +44,42 @@
   object-fit: contain;
 }
 
-.textContent {
-  grid-column: 1;
-  grid-row: 1;
+.speechBubbleWrapper {
+  position: relative;
+  margin-bottom: 35px;
   margin-left: 45px;
   margin-top: 36px;
+  z-index: 1;
+}
+
+.speechBubble {
+  background: #dcdcf8;
+  border-radius: 19px;
+  width: 583px;
+  max-width: 100%;
+  padding: 14px 22px 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.speechBubbleTail {
+  position: absolute;
+  left: 30px;
+  top: 100%;
+  width: 24px;
+  height: auto;
+  z-index: 1;
+}
+
+.textContent {
   font-family: var(--font-body);
   font-size: 20px;
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
-  width: 583px;
+  width: 100%;
   position: relative;
 }
 
@@ -66,6 +89,29 @@
 
 .textContent p:last-child {
   margin-bottom: 0;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  margin-left: 45px;
+}
+
+.iconContainer {
+  width: 66px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Адаптивность */
@@ -79,15 +125,25 @@
     height: 455px;
   }
 
-  .textContent {
-    font-size: 19px;
+  .speechBubbleWrapper {
     margin-left: 42px;
     margin-top: 34px;
+  }
+
+  .speechBubble {
     width: 550px;
+  }
+
+  .textContent {
+    font-size: 19px;
   }
 
   .textContent p {
     margin-bottom: 18px;
+  }
+
+  .bottomRow {
+    margin-left: 42px;
   }
 }
 
@@ -101,15 +157,29 @@
     height: 427px;
   }
 
-  .textContent {
-    font-size: 18px;
+  .speechBubbleWrapper {
     margin-left: 40px;
     margin-top: 32px;
+  }
+
+  .speechBubble {
     width: 515px;
+  }
+
+  .textContent {
+    font-size: 18px;
   }
 
   .textContent p {
     margin-bottom: 16px;
+  }
+
+  .speechBubbleTail {
+    width: 20px;
+  }
+
+  .bottomRow {
+    margin-left: 40px;
   }
 }
 
@@ -123,11 +193,22 @@
     height: 393px;
   }
 
-  .textContent {
-    font-size: 18px;
+  .speechBubbleWrapper {
     margin-left: 35px;
     margin-top: 30px;
+  }
+
+  .speechBubble {
     width: 470px;
+    padding: 14px 22px;
+  }
+
+  .textContent {
+    font-size: 18px;
+  }
+
+  .bottomRow {
+    margin-left: 35px;
   }
 }
 
@@ -142,16 +223,37 @@
     height: 357px;
   }
 
-  .textContent {
-    font-size: 16px;
+  .speechBubbleWrapper {
     margin-left: 30px;
     margin-top: 28px;
+  }
+
+  .speechBubble {
     width: calc(100% - 70px);
     max-width: 420px;
+    padding: 12px 18px;
+  }
+
+  .speechBubbleTail {
+    width: 18px;
+    left: 24px;
+  }
+
+  .textContent {
+    font-size: 16px;
   }
 
   .textContent p {
     margin-bottom: 14px;
+  }
+
+  .bottomRow {
+    margin-left: 30px;
+  }
+
+  .iconContainer {
+    width: 56px;
+    height: 49px;
   }
 }
 
@@ -165,16 +267,38 @@
     height: 306px;
   }
 
-  .textContent {
-    font-size: 14px;
+  .speechBubbleWrapper {
     margin-left: 25px;
     margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  .speechBubble {
     width: calc(100% - 65px);
     max-width: 360px;
+    padding: 10px 16px;
+  }
+
+  .speechBubbleTail {
+    width: 16px;
+    left: 20px;
+  }
+
+  .textContent {
+    font-size: 14px;
   }
 
   .textContent p {
     margin-bottom: 12px;
+  }
+
+  .bottomRow {
+    margin-left: 25px;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 44px;
   }
 }
 
