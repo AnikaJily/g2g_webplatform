@@ -1,8 +1,14 @@
 .decorWrapper {
   position: absolute;
-  left: clamp(20px, 13vw, 198px);
+  left: calc((100vw - 1115px) / 2);
   top: 75px;
   z-index: 0;
+}
+
+@media (max-width: 1199px) {
+  .decorWrapper {
+    left: 20px;
+  }
 }
 
 .vectorIcon {
