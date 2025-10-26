@@ -1,0 +1,79 @@
+.volunteerSpecialties {
+  padding: 60px 0;
+}
+
+.title {
+  font-family: var(--font-header);
+  font-style: italic;
+  font-size: var(--size-header);
+  line-height: 1.1;
+  color: var(--color-text-dark-and-foreground);
+  margin: 0 0 clamp(20px, 2vw, var(--inside-block-spacing)) 0;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+.highlight {
+  color: var(--color-text-dark-and-foreground);
+}
+
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1vw, 12px);
+  align-items: center;
+  margin-bottom: clamp(20px, 2vw, var(--inside-block-spacing));
+}
+
+.badge {
+  border: 2px solid var(--color-text-dark-and-foreground);
+  border-radius: 43px;
+  padding: clamp(6px, 1vw, 10px) clamp(14px, 2vw, 22px);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: 1.2;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: 1.5;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .volunteerSpecialties {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .volunteerSpecialties {
+    padding: 40px 0;
+  }
+
+  .title {
+    line-height: 1.2;
+  }
+
+  .badgesContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .volunteerSpecialties {
+    padding: 30px 0;
+  }
+
+  .badgesContainer {
+    gap: 6px;
+  }
+}
+
