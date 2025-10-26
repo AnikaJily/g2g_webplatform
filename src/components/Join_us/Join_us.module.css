@@ -62,7 +62,6 @@
 /* Адаптивность для больших планшетов */
 @media (max-width: 1200px) {
   .title {
-    font-size: 60px;
     margin-bottom: 28px;
   }
 
@@ -78,7 +77,6 @@
 /* Адаптивность для планшетов */
 @media (max-width: 1024px) {
   .title {
-    font-size: 56px;
     margin-bottom: 40px;
   }
 
@@ -87,20 +85,12 @@
     gap: 32px;
   }
 
-  .introText {
-    font-size: 18px;
-  }
-
   .rightColumn {
     width: 100%;
   }
 
   .tagsContainer {
     width: 100%;
-  }
-
-  .tag {
-    font-size: 18px;
   }
 }
 
@@ -137,12 +127,7 @@
   }
 
   .title {
-    font-size: 32px;
     margin-bottom: 24px;
-  }
-
-  .introText {
-    font-size: 14px;
   }
 
   .content {
@@ -158,7 +143,6 @@
   }
 
   .tag {
-    font-size: 14px;
     padding: 6px 16px;
   }
 }

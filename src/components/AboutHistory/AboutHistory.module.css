@@ -21,7 +21,7 @@
 .title {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 64px;
+  font-size: var(--size-header);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   margin: 0;
@@ -33,7 +33,7 @@
   flex-direction: column;
   gap: 20px;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
@@ -73,12 +73,7 @@
     width: 520px;
   }
 
-  .title {
-    font-size: 60px;
-  }
-
   .description {
-    font-size: 19px;
     gap: 18px;
   }
 
@@ -97,12 +92,7 @@
     width: 480px;
   }
 
-  .title {
-    font-size: 56px;
-  }
-
   .description {
-    font-size: 18px;
     gap: 16px;
   }
 
@@ -123,13 +113,6 @@
     width: 100%;
   }
 
-  .title {
-    font-size: 48px;
-  }
-
-  .description {
-    font-size: 18px;
-  }
 
   .imageContainer {
     width: 100%;
@@ -172,12 +155,7 @@
     gap: 28px;
   }
 
-  .title {
-    font-size: 32px;
-  }
-
   .description {
-    font-size: 14px;
     gap: 12px;
   }
 
