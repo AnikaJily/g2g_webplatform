@@ -1,13 +1,20 @@
-/* Упрощённый и сжатый вариант для блока 404 */
+/* Обёртка для прижатия футера к низу */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+}
+
 .notFoundPage {
-  width: 100vw;
-  /* Заменяем фиксированную высоту на минимальную + автоматическую */
-  min-height: 50vh;    /* минимальная высота на десктопе */
-  height: auto;        /* высота подстраивается под контент */
+  width: 100%;
+  flex: 1;
+  height: 100vh; /* высота viewport минус высота футера */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .container {
@@ -56,9 +63,19 @@
 }
 
 /* Адаптивы с учётом изменённой структуры высот */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .notFoundPage {
-    min-height: 40vh; /* уменьшаем минимальную высоту на планшетах */
+    height: calc(100vh - 190px);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: 100vh;
+  }
+  
+  .notFoundPage {
+    height: calc(100vh - 180px); /* высота viewport минус футер */
   }
   .container {
     padding: 30px 16px; /* уменьшаем отступы */
@@ -69,8 +86,12 @@
 }
 
 @media (max-width: 480px) {
+  .wrapper {
+    min-height: 100vh;
+  }
+  
   .notFoundPage {
-    min-height: 30vh; /* ещё меньше на мобильных */
+    height: calc(100vh - 140px); /* высота viewport минус футер на мобильных */
   }
   .container {
     padding: 20px 12px; /* минимальные отступы */

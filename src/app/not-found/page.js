@@ -15,6 +15,7 @@ window.addEventListener('resize', setVh);
 export default function NotFound() {
   return (
     <>
+    <div className={styles.wrapper}>
       <div className={styles.notFoundPage}>
         <div className={styles.background}>
           <img 
@@ -38,10 +39,10 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-
-      <Footer />
-    </>
-  );
+    </div>
+      <Footer /> 
+      </>
+    );
 }
 
 
