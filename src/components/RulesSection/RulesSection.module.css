@@ -49,7 +49,7 @@
 .title {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 64px;
+  font-size: var(--size-header);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   margin: 0;
@@ -65,7 +65,7 @@
 
 .list {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   margin: 0;
@@ -152,10 +152,6 @@
   .columns {
     gap: 60px;
   }
-  
-  .title {
-    font-size: 56px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -174,15 +170,6 @@
   .rightColumn {
     max-width: 100%;
     width: 100%;
-  }
-
-  .title {
-    font-size: 48px;
-  }
-
-  .list,
-  .description {
-    font-size: 18px;
   }
 
   .badge {
@@ -207,15 +194,6 @@
     gap: 40px;
   }
 
-  .title {
-    font-size: 36px;
-  }
-
-  .list,
-  .description {
-    font-size: 16px;
-  }
-
   .badge {
     font-size: 56px;
     padding: 14px 20px;
@@ -229,7 +207,7 @@
 
   .leftColumn,
   .rightColumn {
-    gap: 32px;
+    gap: var(--inside-block-spacing);
   }
 }
 
@@ -238,16 +216,7 @@
     padding: 32px 16px;
     border-radius: 30px;
     border-width: 8px;
-    gap: 32px;
-  }
-
-  .title {
-    font-size: 28px;
-  }
-
-  .list,
-  .description {
-    font-size: 14px;
+    gap: var(--inside-block-spacing);
   }
 
   .badge {

@@ -17,13 +17,13 @@
   max-width: 653px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: var(--spacing-xxl);
 }
 
 .sectionTitle {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 64px;
+  font-size: var(--size-header);
   line-height: 1;
   color: var(--color-text-dark-and-foreground);
   margin: 0;
@@ -38,7 +38,7 @@
 
 .descriptionText {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
   margin: 0;
@@ -152,10 +152,6 @@
     max-width: 620px;
   }
   
-  .sectionTitle {
-    font-size: 60px;
-  }
-  
   .bottomRow {
     gap: 180px;
   }
@@ -174,15 +170,6 @@
   
   .textContent {
     max-width: 600px;
-  }
-  
-  .sectionTitle {
-    font-size: 56px;
-  }
-  
-  .descriptionText,
-  .bubbleText {
-    font-size: 19px;
   }
   
   .helpBlock {
@@ -209,15 +196,6 @@
   
   .textContent {
     max-width: 100%;
-  }
-  
-  .sectionTitle {
-    font-size: 56px;
-  }
-  
-  .descriptionText,
-  .bubbleText {
-    font-size: 18px;
   }
   
   .helpBlock {
@@ -251,7 +229,7 @@
   }
   
   .textContent {
-    gap: 30px;
+    gap: var(--inside-block-spacing);
   }
   
   .sectionTitle {

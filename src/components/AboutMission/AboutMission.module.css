@@ -6,14 +6,14 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--inside-block-spacing);
   align-items: center;
 }
 
 .title {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 64px;
+  font-size: var(--size-header);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   margin: 0;
@@ -77,7 +77,7 @@
 
 .textContent {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
@@ -118,10 +118,6 @@
 
 /* Адаптивность */
 @media (max-width: 1400px) {
-  .title {
-    font-size: 60px;
-  }
-
   .backgroundImage {
     width: 640px;
     height: 455px;
@@ -136,10 +132,6 @@
     width: 550px;
   }
 
-  .textContent {
-    font-size: 19px;
-  }
-
   .textContent p {
     margin-bottom: 18px;
   }
@@ -150,10 +142,6 @@
 }
 
 @media (max-width: 1200px) {
-  .title {
-    font-size: 56px;
-  }
-
   .backgroundImage {
     width: 600px;
     height: 427px;
@@ -166,10 +154,6 @@
 
   .speechBubble {
     width: 515px;
-  }
-
-  .textContent {
-    font-size: 18px;
   }
 
   .textContent p {
@@ -186,10 +170,6 @@
 }
 
 @media (max-width: 1024px) {
-  .title {
-    font-size: 48px;
-  }
-
   .backgroundImage {
     width: 550px;
     height: 393px;
@@ -205,20 +185,12 @@
     padding: 14px 22px;
   }
 
-  .textContent {
-    font-size: 18px;
-  }
-
   .bottomRow {
     margin-left: 35px;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 42px;
-  }
-
   .missionBox {
     margin: 0 auto;
     max-width: 500px;
@@ -247,10 +219,6 @@
     left: 24px;
   }
 
-  .textContent {
-    font-size: 16px;
-  }
-
   .textContent p {
     margin-bottom: 14px;
   }
@@ -266,10 +234,6 @@
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 32px;
-  }
-
   .missionBox {
     margin: 0 auto;
     max-width: 100%;
@@ -295,10 +259,6 @@
   .speechBubbleTail {
     width: 16px;
     left: 20px;
-  }
-
-  .textContent {
-    font-size: 14px;
   }
 
   .textContent p {

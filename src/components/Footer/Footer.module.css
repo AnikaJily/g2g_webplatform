@@ -25,7 +25,7 @@
 
 .linksSection {
   display: flex;
-  gap: 35px;
+  gap: var(--spacing-xxl);
   align-items: flex-start;
 }
 
@@ -37,7 +37,7 @@
 
 .link {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: #242424;
   text-decoration: none;
@@ -74,10 +74,6 @@
     gap: 200px;
   }
 
-  .link {
-    font-size: 19px;
-  }
-
   .logo {
     width: 240px;
     height: 59px;
@@ -91,10 +87,6 @@
 
   .content {
     gap: 150px;
-  }
-
-  .link {
-    font-size: 18px;
   }
 
   .logo {
@@ -117,11 +109,7 @@
   }
 
   .linksSection {
-    gap: 30px;
-  }
-
-  .link {
-    font-size: 18px;
+    gap: var(--inside-block-spacing);
   }
 
   .logo {
@@ -139,7 +127,7 @@
   }
 
   .content {
-    gap: 32px;
+    gap: var(--inside-block-spacing);
   }
 
   .linksSection {
@@ -149,10 +137,6 @@
 
   .linkColumn {
     gap: 12px;
-  }
-
-  .link {
-    font-size: 16px;
   }
 
   .logo {
@@ -179,10 +163,6 @@
 
   .linkColumn {
     gap: 10px;
-  }
-
-  .link {
-    font-size: 14px;
   }
 
   .logo {

@@ -6,10 +6,10 @@
 .title {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 64px;
+  font-size: var(--size-header);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
-  margin: 0 0 30px 0;
+  margin: 0 0 var(--inside-block-spacing) 0;
   font-weight: 400;
 }
 
@@ -34,7 +34,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--inside-block-spacing);
   width: 100%;
   max-width: 526px;
 }
@@ -47,7 +47,7 @@
 
 .label {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
@@ -60,7 +60,7 @@
   border-radius: 19px;
   padding: 15px 16px;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
@@ -96,7 +96,7 @@
   height: 52px;
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 32px;
+  font-size: var(--size-buttons);
   line-height: normal;
   color: var(--color-text-light-and-background);
   font-weight: 400;
@@ -118,7 +118,7 @@
 .infoContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--inside-block-spacing);
   flex: 1;
   max-width: 481px;
 }
@@ -159,7 +159,7 @@
 
 .messageText {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: var(--size-body);
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
@@ -179,10 +179,6 @@
 
 /* Адаптивность для больших экранов */
 @media (max-width: 1400px) {
-  .title {
-    font-size: 60px;
-  }
-
   .content {
     gap: 25px;
   }
@@ -194,25 +190,10 @@
   .infoContainer {
     max-width: 480px;
   }
-
-  .label,
-  .input,
-  .textarea,
-  .messageText {
-    font-size: 19px;
-  }
-
-  .submitButton {
-    font-size: 30px;
-  }
 }
 
 /* Адаптивность для средних экранов */
 @media (max-width: 1200px) {
-  .title {
-    font-size: 56px;
-  }
-
   .content {
     gap: 20px;
   }
@@ -224,25 +205,17 @@
   .infoContainer {
     max-width: 450px;
   }
-
-  .label,
-  .input,
-  .textarea,
-  .messageText {
-    font-size: 18px;
-  }
 }
 
 /* Адаптивность для планшетов */
 @media (max-width: 1024px) {
   .title {
-    font-size: 48px;
     margin-bottom: 25px;
   }
 
   .content {
     flex-direction: column;
-    gap: 30px;
+    gap: var(--inside-block-spacing);
   }
 
   .formContainer {
@@ -261,14 +234,7 @@
   }
 
   .label,
-  .input,
-  .textarea,
-  .messageText {
-    font-size: 18px;
-  }
-
   .submitButton {
-    font-size: 28px;
     width: 280px;
     padding: 5px 60px 6px;
   }
@@ -276,9 +242,7 @@
 
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
-
   .title {
-    font-size: 36px;
     margin-bottom: 20px;
   }
 
@@ -296,12 +260,6 @@
   }
 
   .label,
-  .input,
-  .textarea,
-  .messageText {
-    font-size: 16px;
-  }
-
   .input {
     height: 48px;
     padding: 12px 14px;
@@ -313,7 +271,6 @@
   }
 
   .submitButton {
-    font-size: 24px;
     width: 240px;
     height: 48px;
     padding: 5px 50px 6px;
@@ -346,9 +303,7 @@
 }
 
 @media (max-width: 480px) {
-
   .title {
-    font-size: 28px;
     margin-bottom: 16px;
   }
 
@@ -365,12 +320,6 @@
   }
 
   .label,
-  .input,
-  .textarea,
-  .messageText {
-    font-size: 14px;
-  }
-
   .input {
     height: 44px;
     padding: 10px 12px;
@@ -382,7 +331,6 @@
   }
 
   .submitButton {
-    font-size: 20px;
     width: 200px;
     height: 44px;
     padding: 4px 40px 5px;

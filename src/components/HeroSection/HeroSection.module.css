@@ -12,7 +12,7 @@
   margin-right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: var(--spacing-xxl);
   align-items: flex-start;
   min-height: 400px;
   position: relative;
@@ -41,7 +41,7 @@
 @media (max-width: 1024px) {
   .content {
     max-width: clamp(320px, 50vw, 480px);
-    gap: 30px;
+    gap: var(--inside-block-spacing);
   }
 }
 

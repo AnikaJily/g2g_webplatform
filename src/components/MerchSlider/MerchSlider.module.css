@@ -136,7 +136,7 @@
 @media (max-width: 1400px) {
   .slidesWrapper {
     grid-template-columns: 480px 560px 480px;
-    gap: 30px;
+    gap: var(--inside-block-spacing);
   }
 
   .slidePreview {

@@ -18,7 +18,7 @@
 .text {
   font-family: var(--font-header);
   font-style: italic;
-  font-size: 32px;
+  font-size: var(--size-buttons);
   font-weight: 400;
   line-height: normal;
   color: var(--color-blue);
@@ -36,10 +36,6 @@
     padding: 5px 65px 6px;
   }
 
-  .text {
-    font-size: 30px;
-  }
-
   .arrow {
     width: 18px;
     height: 10px;
@@ -49,10 +45,6 @@
 @media (max-width: 1024px) {
   .button {
     padding: 5px 60px 6px;
-  }
-
-  .text {
-    font-size: 28px;
   }
 
   .arrow {
@@ -66,10 +58,6 @@
     padding: 4px 48px 5px;
   }
 
-  .text {
-    font-size: 24px;
-  }
-
   .arrow {
     width: 14px;
     height: 8px;
@@ -79,10 +67,6 @@
 @media (max-width: 480px) {
   .button {
     padding: 4px 40px 5px;
-  }
-
-  .text {
-    font-size: 20px;
   }
 
   .arrow {
