@@ -1,0 +1,106 @@
+/* Упрощённый и сжатый вариант для блока 404 */
+.notFoundPage {
+  width: 100vw;
+  /* Заменяем фиксированную высоту на минимальную + автоматическую */
+  min-height: 50vh;    /* минимальная высота на десктопе */
+  height: auto;        /* высота подстраивается под контент */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1512px;
+  /* Добавляем вертикальные отступы для контента */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.messageBox {
+  background: var(--color-text-light-and-background);
+  border: 2px solid var(--color-pink);
+  border-radius: 24px;
+  padding: clamp(16px, 3vw, 24px);
+  width: 100%;
+  max-width: min(720px, 90vw);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-family: var(--font-header);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 4vw, 44px);
+  line-height: 1.08;
+  color: var(--color-text-dark-and-foreground);
+  text-align: center;
+  margin: 0;
+  max-width: 60ch;
+  word-break: normal;
+  white-space: normal;
+}
+
+/* Адаптивы с учётом изменённой структуры высот */
+@media (max-width: 768px) {
+  .notFoundPage {
+    min-height: 40vh; /* уменьшаем минимальную высоту на планшетах */
+  }
+  .container {
+    padding: 30px 16px; /* уменьшаем отступы */
+  }
+  .content { gap: 18px; }
+  .message { font-size: clamp(18px, 5vw, 32px); max-width: 46ch; }
+  .messageBox { max-width: min(520px, 92vw); padding: clamp(12px, 4vw, 20px); }
+}
+
+@media (max-width: 480px) {
+  .notFoundPage {
+    min-height: 30vh; /* ещё меньше на мобильных */
+  }
+  .container {
+    padding: 20px 12px; /* минимальные отступы */
+  }
+  .content { gap: 14px; }
+  .message { font-size: clamp(16px, 6vw, 28px); max-width: 42ch; }
+  .messageBox { max-width: 92vw; padding: 14px; border-radius: 20px; }
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .backgroundImage {
+    object-position: center 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .backgroundImage {
+    object-position: center 30%;
+  }
+}

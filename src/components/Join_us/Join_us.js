@@ -2,6 +2,7 @@
 
 import styles from './Join_us.module.css';
 import Button_More from '../Button_more/Button_more';
+import JoinKnotDecor from '@/components/JoinKnotDecor/JoinKnotDecor';
 
 export default function JoinUs() {
   const specialties = [
@@ -15,9 +16,9 @@ export default function JoinUs() {
 
   return (
     <section className={styles.joinUs}>
-      <div className={styles.container}>
+     
+      <div className="container">
         <h2 className={styles.title}>Присоединяйтесь к нашему проекту</h2>
-        
         <div className={styles.content}>
           <p className={styles.introText}>
             Ищем специалисток и специалистов в сферах:
@@ -36,7 +37,8 @@ export default function JoinUs() {
             <Button_More />
           </div>
         </div>
-      </div>
+    </div>
+    <JoinKnotDecor />
     </section>
   );
 }

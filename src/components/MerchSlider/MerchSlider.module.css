@@ -1,0 +1,300 @@
+.sliderSection {
+  background: var(--color-text-light-and-background);
+  position: relative;
+  padding: 20px 0 80px 0;
+  margin-top: -30px;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slidesWrapper {
+  display: grid;
+  grid-template-columns: 518px 600px 518px;
+  gap: 39px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 635px;
+}
+
+.slidePreview,
+.slideActive {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.slidePreview {
+  height: 548px;
+  opacity: 0.34;
+  transform: scale(0.95);
+}
+
+.slideActive {
+  height: 635px;
+  z-index: 2;
+}
+
+.slideImageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.slideImage {
+  width: 100%;
+  height: 126%;
+  object-fit: cover;
+  object-position: center top;
+  transform: translateY(-13.54%);
+}
+
+/* Кнопки навигации */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-text-light-and-background);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover {
+  opacity: 0.9;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.navButton:active {
+  transform: translateY(-50%) scale(0.98);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navButtonPrev {
+  left: 40px;
+}
+
+.navButtonNext {
+  right: 40px;
+}
+
+.navButton img {
+  width: 44px;
+  height: 30px;
+  display: block;
+}
+
+/* Dots навигация */
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #E4C1DA;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+.dotActive {
+  background: var(--color-pink);
+  transform: scale(1.15);
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+  .slidesWrapper {
+    grid-template-columns: 480px 560px 480px;
+    gap: 30px;
+  }
+
+  .slidePreview {
+    height: 510px;
+  }
+
+  .slideActive {
+    height: 590px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slidesWrapper {
+    grid-template-columns: 420px 500px 420px;
+    gap: 25px;
+  }
+
+  .slidePreview {
+    height: 460px;
+  }
+
+  .slideActive {
+    height: 540px;
+  }
+
+  .navButton {
+    width: 70px;
+    height: 70px;
+  }
+
+  .navButton img {
+    width: 36px;
+    height: 24px;
+  }
+
+  .navButtonPrev {
+    left: 30px;
+  }
+
+  .navButtonNext {
+    right: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slidesWrapper {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 500px;
+  }
+
+  .slidePreview {
+    display: none;
+  }
+
+  .slideActive {
+    height: 500px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .navButton {
+    width: 65px;
+    height: 65px;
+  }
+
+  .navButtonPrev {
+    left: 15px;
+  }
+
+  .navButtonNext {
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderSection {
+    padding: 15px 0 60px 0;
+    margin-top: -20px;
+  }
+
+  .slideActive {
+    height: 450px;
+    max-width: 480px;
+  }
+
+  .navButton {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navButton img {
+    width: 32px;
+    height: 22px;
+  }
+
+  .navButtonPrev {
+    left: 10px;
+  }
+
+  .navButtonNext {
+    right: 10px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dotsContainer {
+    gap: 10px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderSection {
+    padding: 10px 0 40px 0;
+    margin-top: -15px;
+  }
+
+  .slideActive {
+    height: 380px;
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .slideImageWrapper {
+    border-radius: 30px;
+  }
+
+  .navButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navButton img {
+    width: 28px;
+    height: 20px;
+  }
+
+  .navButtonPrev {
+    left: 5px;
+  }
+
+  .navButtonNext {
+    right: 5px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dotsContainer {
+    gap: 8px;
+    margin-top: 20px;
+  }
+}
+

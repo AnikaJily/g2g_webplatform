@@ -1,27 +1,6 @@
 .joinUs {
   position: relative;
-  background: var(--color-text-light-and-background);
-}
-
-.container {
-  margin-inline: auto;
-  max-width: 100%;
-}
-
-/* Декор нижнего узла */
-.knot {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -40px; /* легкий выход за секцию, как в макете */
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.knot img {
-  display: block;
-  width: 100%;
-  height: auto;
+  overflow: visible;
 }
 
 .title {
@@ -29,7 +8,14 @@
   font-size: var(--size-header);
   font-weight: 400;
   color: var(--color-text-dark-and-foreground);
-  margin: 0 0 35px 0;
+  margin: 0 0 30px 0;
+}
+
+.joinUs .container,
+.joinUs .content,
+.joinUs .title {    /* можно на title тоже поставить, но лучше на container/content */
+  position: relative; /* обязательно */
+  z-index: 1;
 }
 
 .content {
@@ -44,6 +30,7 @@
   color: var(--color-text-dark-and-foreground);
   margin: 0;
   flex-shrink: 0;
+  z-index: 1;
 }
 
 .rightColumn {
@@ -56,13 +43,13 @@
 .tagsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   width: 600px;
+  gap: 12px;
   max-width: 100%;
 }
 
 .tag {
-  border: 2px solid var(--color-text-dark-and-foreground);
+  box-shadow: inset 0 0 0 2px var(--color-text-dark-and-foreground);
   border-radius: 43px;
   padding: 10px 22px;
   font-family: var(--font-body);
@@ -70,6 +57,22 @@
   color: var(--color-text-dark-and-foreground);
   align-items: center;
   justify-content: center;
+}
+
+/* Адаптивность для больших планшетов */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 60px;
+    margin-bottom: 28px;
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .tagsContainer {
+    width: 100%;
+  }
 }
 
 /* Адаптивность для планшетов */
@@ -92,6 +95,10 @@
     width: 100%;
   }
 
+  .tagsContainer {
+    width: 100%;
+  }
+
   .tag {
     font-size: 18px;
   }
@@ -99,9 +106,6 @@
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
-  .joinUs {
-    padding: 60px 0;
-  }
 
   .title {
     font-size: 42px;
@@ -136,10 +140,6 @@
 
 /* Адаптивность для маленьких мобильных */
 @media (max-width: 480px) {
-  .joinUs {
-    padding: 50px 0;
-  }
-
   .container {
     padding: 0 16px;
   }

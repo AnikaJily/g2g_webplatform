@@ -22,7 +22,42 @@
 
 @media (max-width: 1023px) {
   .logoContainer {
-    height: 28px;
-    width: 99px;
+    height: 29px;
+    width: 102px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logoContainer {
+    height: 27px;
+    width: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    height: 25px;
+    width: 88px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoContainer {
+    height: 23px;
+    width: 81px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoContainer {
+    height: 21px;
+    width: 74px;
+  }
+}
+
+@media (max-width: 375px) {
+  .logoContainer {
+    height: 19px;
+    width: 67px;
   }
 }

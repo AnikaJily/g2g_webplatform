@@ -31,6 +31,36 @@
   margin-top: 5px; 
 }
 
+@media (max-width: 1200px) {
+  .button {
+    padding: 5px 65px 6px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .arrow {
+    width: 18px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button {
+    padding: 5px 60px 6px;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+
+  .arrow {
+    width: 16px;
+    height: 9px;
+  }
+}
+
 @media (max-width: 768px) {
   .button {
     padding: 4px 48px 5px;
@@ -41,7 +71,22 @@
   }
 
   .arrow {
-    width: 12px;
+    width: 14px;
     height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 4px 40px 5px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .arrow {
+    width: 12px;
+    height: 7px;
   }
 }

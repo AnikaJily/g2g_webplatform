@@ -1,21 +1,10 @@
 .knotWrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -40px; /* как в макете - легкий выход ниже секции */
-  pointer-events: none;
+  position: absolute;               /* привязка к .joinUs */
+  left: 50%;                        /* центр по горизонтали секции */
+  transform: translateX(-50%);      /* реально центрируем */
+  bottom: -40px;                    /* выход ниже секции */
+  width: 100vw;                     /* растянуть на всю ширину экрана */
+  max-width: none;                  /* отменяем какие-либо ограничения */
+  pointer-events: none;             /* не мешает кликам */
+  z-index: -0;                        /* под контентом; поднимай если нужно */
 }
-
-.knotImage {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .knotWrapper {
-    display: none;
-  }
-}
-
-

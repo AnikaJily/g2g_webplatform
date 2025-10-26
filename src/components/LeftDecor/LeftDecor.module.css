@@ -1,15 +1,19 @@
 .decorWrapper {
   position: absolute;
-  left: var(--page-padding-desktop); 
+  left: clamp(20px, 13vw, 198px);
   top: 75px;
+  z-index: 0;
 }
 
 .vectorIcon {
   height: 848px;
   max-width: 100%;
   object-fit: contain;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .decorWrapper { display: none; }
+  .decorWrapper { 
+    display: none;
+  }
 }

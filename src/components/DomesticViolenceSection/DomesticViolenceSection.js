@@ -3,8 +3,8 @@ import Button from '../Button/Button';
 
 export default function DomesticViolenceSection() {
   return (
+    <div className="container">
     <section className={styles.domesticViolenceSection}>
-      <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.textContent}>
             <h2 className={styles.sectionTitle}>Что такое домашнее насилие?</h2>
@@ -54,7 +54,8 @@ export default function DomesticViolenceSection() {
             <div className={styles.houseImage}></div>
           </div>
         </div>
-      </div>
+      
     </section>
+    </div>
   );
 }

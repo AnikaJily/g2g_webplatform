@@ -1,12 +1,39 @@
 .navItem {
-  display: inline-grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: normal;
+  color: #242424;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.underlineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 20px;
+  padding: 8px 0;
+  margin-top: -5px;
+  box-sizing: border-box;
   position: relative;
 }
 
 .underlineImage {
   position: absolute;
-  object-fit: cover;
+  width: 70px;
+  height: 20px;
   transition: opacity 0.3s ease;
 }
 
@@ -26,4 +53,92 @@
   opacity: 1;
 }
 
-/* Дублированные стили удалены - используем основные стили .navLink выше */
+/* Большая линия для Волонтерство */
+.bigUnderline {
+  width: 111px;
+}
+
+.bigUnderlineImage {
+  width: 110px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .underlineContainer {
+    width: 65px;
+    height: 18px;
+  }
+
+  .underlineImage {
+    width: 65px;
+    height: 18px;
+  }
+
+  .bigUnderline {
+    width: 100px;
+  }
+
+  .bigUnderlineImage {
+    width: 99px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navLink {
+    font-size: 15px;
+  }
+
+  .navItem {
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
+
+  .underlineContainer {
+    width: 60px;
+    height: 16px;
+    padding: 6px 0;
+  }
+
+  .underlineImage {
+    width: 60px;
+    height: 16px;
+  }
+
+  .bigUnderline {
+    width: 95px;
+  }
+
+  .bigUnderlineImage {
+    width: 94px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navLink {
+    font-size: 14px;
+  }
+
+  .navItem {
+    padding-top: 10px;
+    padding-bottom: 3px;
+  }
+
+  .underlineContainer {
+    width: 55px;
+    height: 14px;
+    padding: 5px 0;
+  }
+
+  .underlineImage {
+    width: 55px;
+    height: 14px;
+  }
+
+  .bigUnderline {
+    width: 85px;
+  }
+
+  .bigUnderlineImage {
+    width: 84px;
+  }
+}

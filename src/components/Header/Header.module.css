@@ -11,44 +11,101 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Используется вместе с глобальным .container (у тебя в разметке: <div className="container headerContainer">) */
 .headerContainer {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   column-gap: clamp(16px, 4.6vw, 80px);
   height: 100%;
-  /* не добавляем padding-inline здесь — он приходит из .container */
 }
 
-/* Левый слот: логотип (не абсолютный) */
-/* Если у тебя logoContainer в модуле Logo.module.css — он автоматически займет левую колонку */
 .logoWrapper {
-  /* при необходимости можно задать размеры, но позиционировать не нужно */
   display: flex;
   align-items: center;
   margin-left: 0; 
 }
 
-/* Навигация (середина) */
 .navigation {
   display: flex;
   gap: clamp(12px, 4vw, 70px);
   align-items: center;
-  justify-self: center; /* центрируем именно в средней колонке */
+  justify-self: center;
 }
 
-/* Правая колонка: кнопка помощи */
 .helpWrapper {
   display: flex;
   align-items: center;
-  justify-self: end; /* гарантирует, что элемент будет справа */
+  justify-self: end;
 }
 
-/* Адаптация высоты хэдера (упрощено) */
+/* Адаптация высоты хэдера */
 @media (max-width: 1199px) {
-  .header { height: 70px; }
+  .header { 
+    height: 70px; 
+  }
+
+  .headerContainer {
+    column-gap: clamp(16px, 4vw, 60px);
+  }
 }
+
 @media (max-width: 1023px) {
-  .header { height: 65px; }
+  .header { 
+    height: 67px; 
+  }
+
+  .headerContainer {
+    column-gap: clamp(14px, 3.5vw, 50px);
+  }
+}
+
+@media (max-width: 900px) {
+  .header { 
+    height: 64px; 
+  }
+
+  .headerContainer {
+    column-gap: clamp(14px, 3vw, 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header { 
+    height: 60px; 
+  }
+  
+  .headerContainer {
+    grid-template-columns: auto 1fr auto;
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header { 
+    height: 57px; 
+  }
+
+  .headerContainer {
+    column-gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header { 
+    height: 54px; 
+  }
+
+  .headerContainer {
+    column-gap: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header { 
+    height: 52px; 
+  }
+
+  .headerContainer {
+    column-gap: 10px;
+  }
 }

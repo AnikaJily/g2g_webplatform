@@ -1,0 +1,200 @@
+.urgentHelp {
+  position: relative;
+  width: 100%;
+}
+
+.owncontainer {
+  max-width: 1512px;
+  border: 15px solid var(--color-text-dark-and-foreground);
+  border-radius: 100px;
+  padding: 107px;
+  background: var(--color-text-light-and-background);
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-family: var(--font-header);
+  font-size: var(--size-header);
+  color: var(--color-text-dark-and-foreground);
+  margin: 0;
+  font-weight: 400;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text-dark-and-foreground);
+  margin: 0;
+}
+
+.helplinesList {
+  display: flex;
+  gap: 70px;
+  width: 100%;
+  align-items: flex-start;
+  
+}
+
+.helplineCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  
+}
+
+.number {
+  font-family: var(--font-header);
+  font-size: 32px;
+  color: var(--color-pink);
+  margin: 0;
+  font-weight: 400;
+  white-space: pre-wrap;
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: normal;
+  color: var(--color-text-dark-and-foreground);
+  margin: 0;
+  font-weight: 400;
+  white-space: pre-wrap;
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+  .owncontainer {
+    padding: 90px 80px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .description {
+    font-size: 19px;
+  }
+
+  .helplinesList {
+    gap: 50px;
+  }
+
+  .number {
+    font-size: 30px;
+  }
+
+  .cardDescription {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .owncontainer {
+    padding: 75px 70px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .helplinesList {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .owncontainer {
+    padding: 60px 60px;
+    border-radius: 60px;
+    border-width: 12px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .helplinesList {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .helplineCard {
+    flex-basis: calc(50% - 20px);
+    min-width: 200px;
+  }
+
+  .number {
+    font-size: 28px;
+  }
+
+  .cardDescription {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .owncontainer {
+    padding: 40px 30px;
+    border-radius: 40px;
+    border-width: 10px;
+  }
+
+  .contentWrapper {
+    gap: 25px;
+  }
+
+  .helplinesList {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .helplineCard {
+    flex-basis: 100%;
+  }
+
+  .number {
+    font-size: 24px;
+  }
+
+  .cardDescription {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .owncontainer {
+    padding: 32px 20px;
+    border-radius: 30px;
+    border-width: 8px;
+  }
+
+  .contentWrapper {
+    gap: 20px;
+  }
+
+  .helplinesList {
+    gap: 24px;
+  }
+
+  .helplineCard {
+    gap: 8px;
+  }
+
+  .number {
+    font-size: 20px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+}

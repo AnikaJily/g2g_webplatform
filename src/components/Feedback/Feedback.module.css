@@ -1,0 +1,420 @@
+.feedback {
+  background: var(--color-text-light-and-background);
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-header);
+  font-style: italic;
+  font-size: 64px;
+  line-height: normal;
+  color: var(--color-text-dark-and-foreground);
+  margin: 0 0 30px 0;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  gap: 29px;
+  align-items: flex-start;
+}
+
+/* Левая часть: Форма */
+.formContainer {
+  background: #DCDCF8;
+  border-radius: 19px;
+  padding: 24px 40px;
+  width: 607px;
+  min-height: 442px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 526px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: normal;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+}
+
+.input,
+.textarea {
+  background: var(--color-text-light-and-background);
+  border: none;
+  border-radius: 19px;
+  padding: 15px 16px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: normal;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input {
+  height: 54px;
+}
+
+.textarea {
+  height: 151px;
+  resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #989797;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-blue);
+}
+
+.submitButton {
+  background: var(--color-blue);
+  border: none;
+  border-radius: 19px;
+  padding: 5px 74px 6px;
+  height: 52px;
+  font-family: var(--font-header);
+  font-style: italic;
+  font-size: 32px;
+  line-height: normal;
+  color: var(--color-text-light-and-background);
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  align-self: center;
+  width: 323px;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.submitButton:active {
+  opacity: 0.8;
+}
+
+/* Правая часть: Инфо блоки */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  max-width: 481px;
+}
+
+.messagesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.messageBox {
+  border: 4px solid #DCDCF8;
+  border-radius: 19px;
+  padding: 14px 21px;
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+}
+
+.messageBoxWithTail {
+  background: #DCDCF8;
+  border-radius: 19px;
+  padding: 18px 21px;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.messageTail {
+  position: absolute;
+  left: 30px;
+  top: 100%;
+  width: 24px;
+  height: auto;
+  z-index: 1;
+}
+
+.messageText {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: normal;
+  color: var(--color-text-dark-and-foreground);
+  font-weight: 400;
+  margin: 0;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 68px;
+  height: auto;
+}
+
+/* Адаптивность для больших экранов */
+@media (max-width: 1400px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .content {
+    gap: 25px;
+  }
+
+  .formContainer {
+    width: 580px;
+  }
+
+  .infoContainer {
+    max-width: 480px;
+  }
+
+  .label,
+  .input,
+  .textarea,
+  .messageText {
+    font-size: 19px;
+  }
+
+  .submitButton {
+    font-size: 30px;
+  }
+}
+
+/* Адаптивность для средних экранов */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 56px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .formContainer {
+    width: 550px;
+  }
+
+  .infoContainer {
+    max-width: 450px;
+  }
+
+  .label,
+  .input,
+  .textarea,
+  .messageText {
+    font-size: 18px;
+  }
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .formContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .infoContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .messageBox,
+  .messageBoxWithTail {
+    max-width: 600px;
+  }
+
+  .label,
+  .input,
+  .textarea,
+  .messageText {
+    font-size: 18px;
+  }
+
+  .submitButton {
+    font-size: 28px;
+    width: 280px;
+    padding: 5px 60px 6px;
+  }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .formContainer {
+    padding: 20px 24px;
+    min-height: auto;
+  }
+
+  .form {
+    gap: 24px;
+  }
+
+  .formGroup {
+    gap: 12px;
+  }
+
+  .label,
+  .input,
+  .textarea,
+  .messageText {
+    font-size: 16px;
+  }
+
+  .input {
+    height: 48px;
+    padding: 12px 14px;
+  }
+
+  .textarea {
+    height: 130px;
+    padding: 12px 14px;
+  }
+
+  .submitButton {
+    font-size: 24px;
+    width: 240px;
+    height: 48px;
+    padding: 5px 50px 6px;
+  }
+
+  .messagesBlock {
+    gap: 12px;
+  }
+
+  .messageBox {
+    border-width: 3px;
+    padding: 12px 18px;
+    min-height: 48px;
+  }
+
+  .messageBoxWithTail {
+    padding: 15px 18px;
+    min-height: 75px;
+  }
+
+  .messageTail {
+    left: 28px;
+    bottom: -10px;
+    width: 28px;
+  }
+
+  .logo {
+    width: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .formContainer {
+    padding: 16px 20px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .formGroup {
+    gap: 10px;
+  }
+
+  .label,
+  .input,
+  .textarea,
+  .messageText {
+    font-size: 14px;
+  }
+
+  .input {
+    height: 44px;
+    padding: 10px 12px;
+  }
+
+  .textarea {
+    height: 110px;
+    padding: 10px 12px;
+  }
+
+  .submitButton {
+    font-size: 20px;
+    width: 200px;
+    height: 44px;
+    padding: 4px 40px 5px;
+  }
+
+  .messagesBlock {
+    gap: 10px;
+  }
+
+  .messageBox {
+    border-width: 2px;
+    padding: 10px 16px;
+    min-height: 44px;
+  }
+
+  .messageBoxWithTail {
+    padding: 12px 16px;
+    min-height: 68px;
+  }
+
+  .messageTail {
+    left: 24px;
+    bottom: -8px;
+    width: 24px;
+  }
+
+  .infoContainer {
+    gap: 32px;
+  }
+
+  .logo {
+    width: 48px;
+  }
+}
+

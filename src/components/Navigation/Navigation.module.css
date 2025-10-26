@@ -2,49 +2,152 @@
 .pagesContainer {
   justify-self: center;
   grid-column: 2;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
-  gap: 70px;
+  gap: 60px;
+  position: relative;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 70px; /* фиксированный зазор между пунктами */
-  flex-wrap: wrap;             /* при нехватке места переносим */
-}
-
-
-@media (max-width: 1024px) {
-  :global(.navLink), .navLink {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navigation { display: none; }
-  .navigation {
-    gap: clamp(12px, 4vw, 24px);
-  }
-  :global(.navLink), .navLink {
-    font-size: 14px;
-  }
+  gap: 60px;
+  box-sizing: border-box;
+  padding-top: 0;
 }
 
 .menuButton {
   display: inline-grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.menuButton:hover {
+  opacity: 0.7;
 }
 
 .menuIcon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .navigation {
+    gap: 50px;
+  }
+
+  .pagesContainer {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    gap: 40px;
+  }
+
+  .pagesContainer {
+    gap: 40px;
+  }
+
+  :global(.navLink), .navLink {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation {
+    display: none;
+  }
+
+  .pagesContainer {
+    gap: 20px;
+  }
+
+  .menuIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Выпадающее меню */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  transform: translateX(50%);
+  background: var(--color-text-light-and-background);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  padding: 20px;
+  min-width: 250px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+  }
+}
+
+.dropdownNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menuButtonActive {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/* Адаптивность выпадающего меню */
+@media (max-width: 768px) {
+  .dropdownMenu {
+    min-width: 220px;
+    padding: 15px;
+    top: calc(100% + 12px);
+  }
+
+  .dropdownNav {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdownMenu {
+    min-width: 200px;
+    padding: 12px;
+    top: calc(100% + 10px);
+  }
+
+  .dropdownNav {
+    gap: 6px;
+  }
 }

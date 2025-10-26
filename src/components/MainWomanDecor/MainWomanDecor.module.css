@@ -1,23 +1,67 @@
-/* HeroImageDecor.module.css */
+/* MainWomanDecor.module.css — Заменить текущий файл этим кодом */
+
 .imageWrapper {
-  position: absolute; /* или absolute с top/right = 0 */
-  top: 55%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 665px;
-  height: 651px;
+  position: absolute;         /* привязываем к родительскому контейнеру, не следует за скроллом */
+  top: 50%;
+  right: 0;                   /* по умолчанию прижат к правому краю */
+  transform: translateY(-50%);/* вертикальное центрирование */
+  width: clamp(420px, 45vw, 665px);
+  height: auto;
+  aspect-ratio: 665 / 651;
+  max-width: none;            /* не ограничивать по умолчанию */
+  pointer-events: none;       /* не мешает кликам */
   z-index: 1;
-  pointer-events: none;
+  transition: right 0.36s ease, width 0.36s ease, opacity 0.3s ease;
+  will-change: right, width, transform;
 }
 
+/* само изображение растягиваем по родителю */
 .heroImage {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: right center;
 }
 
-@media (max-width: 768px) {
+/* Большие экраны — картинка прижата к правому краю */
+@media (min-width: 1512px) {
   .imageWrapper {
-    display: none; /* скрываем на мобильных */
+    right: 0;
+    width: clamp(420px, 40vw, 665px);
+  }
+}
+
+/* Средние экраны — немного уводим вправо */
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .imageWrapper {
+    right: -6vw;   /* уходит за край на ~6% ширины окна */
+    width: clamp(420px, 44vw, 600px);
+  }
+}
+
+/* Ноуты / планшеты */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .imageWrapper {
+    right: -12vw;  /* уходит примерно на 18% */
+    width: clamp(420px, 50vw, 520px);
+  }
+}
+
+/* Мобильные — сильнее уводим, чтобы картинка вышла за экран на ~40% */
+@media (max-width: 767px) and (min-width: 420px) {
+  .imageWrapper {
+    right: -20vw;  /* уходит на ~30% */
+    width: clamp(360px, 70vw, 460px);
+    opacity: 0.98;
+  }
+}
+
+/* Очень узкие экраны — ~40% выхода */
+@media (max-width: 419px) {
+  .imageWrapper {
+    right: -30vw;  /* уходит на ~40% — визуально почти "вне экрана" */
+    width: clamp(350px, 80vw, 440px);
+    opacity: 0.95;
   }
 }
