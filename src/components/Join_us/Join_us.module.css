@@ -110,25 +110,17 @@
   .title {
     font-size: 42px;
     margin-bottom: 32px;
-    text-align: center;
   }
 
   .content {
     gap: 24px;
-    align-items: center;
   }
 
   .introText {
     font-size: 16px;
-    text-align: center;
-  }
-
-  .rightColumn {
-    align-items: center;
   }
 
   .tagsContainer {
-    justify-content: center;
     gap: 10px;
   }
 

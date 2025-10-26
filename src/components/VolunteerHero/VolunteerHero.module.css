@@ -94,7 +94,6 @@
   .content {
     flex-direction: column;
     gap: clamp(30px, 5vw, 40px);
-    text-align: center;
   }
 
   .textBlock {
@@ -102,11 +101,11 @@
   }
 
   .buttonWrapper {
-    align-self: center;
+    align-self: flex-start;
   }
 
   .iconContainer {
-    margin: 0 auto;
+    margin: 0;
   }
 }
 

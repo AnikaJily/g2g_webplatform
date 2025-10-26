@@ -22,8 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 20px;
+  width: clamp(65px, 7vw, 70px);
+  height: clamp(17px, 2vw, 20px);
   padding: 8px 0;
   margin-top: -5px;
   box-sizing: border-box;
@@ -32,8 +32,8 @@
 
 .underlineImage {
   position: absolute;
-  width: 70px;
-  height: 20px;
+  width: clamp(65px, 7vw, 70px);
+  height: clamp(17px, 2vw, 20px);
   transition: opacity 0.3s ease;
 }
 
@@ -55,34 +55,14 @@
 
 /* Большая линия для Волонтерство */
 .bigUnderline {
-  width: 111px;
+  width: clamp(100px, 11vw, 110px);
 }
 
 .bigUnderlineImage {
-  width: 110px;
+  width: clamp(100px, 11vw, 110px);
 }
 
 /* Адаптивность */
-@media (max-width: 1200px) {
-  .underlineContainer {
-    width: 65px;
-    height: 18px;
-  }
-
-  .underlineImage {
-    width: 65px;
-    height: 18px;
-  }
-
-  .bigUnderline {
-    width: 100px;
-  }
-
-  .bigUnderlineImage {
-    width: 99px;
-  }
-}
-
 @media (max-width: 1024px) {
   .navLink {
     font-size: 15px;
@@ -94,22 +74,7 @@
   }
 
   .underlineContainer {
-    width: 60px;
-    height: 16px;
     padding: 6px 0;
-  }
-
-  .underlineImage {
-    width: 60px;
-    height: 16px;
-  }
-
-  .bigUnderline {
-    width: 95px;
-  }
-
-  .bigUnderlineImage {
-    width: 94px;
   }
 }
 
@@ -124,21 +89,6 @@
   }
 
   .underlineContainer {
-    width: 55px;
-    height: 14px;
     padding: 5px 0;
-  }
-
-  .underlineImage {
-    width: 55px;
-    height: 14px;
-  }
-
-  .bigUnderline {
-    width: 85px;
-  }
-
-  .bigUnderlineImage {
-    width: 84px;
   }
 }

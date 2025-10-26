@@ -205,13 +205,10 @@
   .content {
     flex-direction: column;
     gap: 40px;
-    align-items: center;
   }
   
   .textContent {
     max-width: 100%;
-    align-items: center;
-    text-align: center;
   }
   
   .sectionTitle {

@@ -53,8 +53,7 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  border-top-left-radius: 19px;
-  border-bottom-left-radius: 19px;
+  border-radius: 19px;
 }
 
 .image {
@@ -151,13 +150,11 @@
 
   .title {
     font-size: 42px;
-    text-align: center;
   }
 
   .description {
     font-size: 16px;
     gap: 14px;
-    text-align: center;
   }
 
   .imageContainer {

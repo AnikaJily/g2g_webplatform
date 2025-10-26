@@ -61,10 +61,6 @@
   .title {
     line-height: 1.2;
   }
-
-  .badgesContainer {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
