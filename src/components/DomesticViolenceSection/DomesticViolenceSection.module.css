@@ -9,6 +9,7 @@
   align-items: center;
   gap: 65px;
   position: relative;
+  z-index: 2;
 }
 
 .textContent {
@@ -245,7 +246,7 @@
   }
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность для мобильных устройств
 @media (max-width: 768px) {
   
   .container {
@@ -305,7 +306,7 @@
 }
 
 /* Адаптивность для маленьких мобильных устройств */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   
   .container {
     padding: 0 16px;
@@ -354,5 +355,5 @@
     width: 240px;
     height: 328px;
   }
-}
-
+} */
+ 

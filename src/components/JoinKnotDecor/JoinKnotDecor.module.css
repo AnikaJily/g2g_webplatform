@@ -8,3 +8,10 @@
   pointer-events: none;             /* не мешает кликам */
   z-index: -0;                        /* под контентом; поднимай если нужно */
 }
+
+/* Скрываем на маленьких экранах */
+@media (max-width: 768px) {
+  .knotWrapper {
+    display: none;
+  }
+}
