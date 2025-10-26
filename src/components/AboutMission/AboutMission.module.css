@@ -3,28 +3,41 @@
   position: relative;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
 .title {
   font-family: var(--font-header);
   font-style: italic;
   font-size: 64px;
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
-  margin: 0 0 30px 0;
+  margin: 0;
   font-weight: 400;
   text-align: center;
+  min-width: 100%;
 }
 
 .missionBox {
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  justify-items: start;
   position: relative;
-  width: 668px;
-  max-width: 100%;
-  margin: 0 auto;
+  line-height: 0;
 }
 
 .backgroundImage {
-  width: 100%;
-  height: 464px;
-  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  width: 668px;
+  height: 477px;
+  margin: 0;
+  max-width: 100%;
 }
 
 .decorImage {
@@ -34,15 +47,17 @@
 }
 
 .textContent {
-  position: absolute;
-  top: 36px;
-  left: 45px;
-  right: 40px;
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 45px;
+  margin-top: 36px;
   font-family: var(--font-body);
   font-size: 20px;
   line-height: normal;
   color: var(--color-text-dark-and-foreground);
   font-weight: 400;
+  width: 583px;
+  position: relative;
 }
 
 .textContent p {
@@ -59,19 +74,16 @@
     font-size: 60px;
   }
 
-  .missionBox {
-    width: 640px;
-  }
-
   .backgroundImage {
-    height: 445px;
+    width: 640px;
+    height: 455px;
   }
 
   .textContent {
     font-size: 19px;
-    top: 34px;
-    left: 42px;
-    right: 38px;
+    margin-left: 42px;
+    margin-top: 34px;
+    width: 550px;
   }
 
   .textContent p {
@@ -84,19 +96,16 @@
     font-size: 56px;
   }
 
-  .missionBox {
-    width: 600px;
-  }
-
   .backgroundImage {
-    height: 420px;
+    width: 600px;
+    height: 427px;
   }
 
   .textContent {
     font-size: 18px;
-    top: 32px;
-    left: 40px;
-    right: 35px;
+    margin-left: 40px;
+    margin-top: 32px;
+    width: 515px;
   }
 
   .textContent p {
@@ -107,45 +116,38 @@
 @media (max-width: 1024px) {
   .title {
     font-size: 48px;
-    margin-bottom: 25px;
-  }
-
-  .missionBox {
-    width: 550px;
   }
 
   .backgroundImage {
-    height: 385px;
+    width: 550px;
+    height: 393px;
   }
 
   .textContent {
     font-size: 18px;
-    top: 30px;
-    left: 35px;
-    right: 30px;
+    margin-left: 35px;
+    margin-top: 30px;
+    width: 470px;
   }
 }
 
 @media (max-width: 768px) {
   .title {
     font-size: 42px;
-    margin-bottom: 20px;
-  }
-
-  .missionBox {
-    width: 100%;
-    max-width: 500px;
   }
 
   .backgroundImage {
-    height: 350px;
+    width: 100%;
+    max-width: 500px;
+    height: 357px;
   }
 
   .textContent {
     font-size: 16px;
-    top: 28px;
-    left: 30px;
-    right: 25px;
+    margin-left: 30px;
+    margin-top: 28px;
+    width: calc(100% - 70px);
+    max-width: 420px;
   }
 
   .textContent p {
@@ -156,22 +158,19 @@
 @media (max-width: 480px) {
   .title {
     font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  .missionBox {
-    width: 100%;
   }
 
   .backgroundImage {
-    height: 300px;
+    width: 100%;
+    height: 306px;
   }
 
   .textContent {
     font-size: 14px;
-    top: 24px;
-    left: 25px;
-    right: 20px;
+    margin-left: 25px;
+    margin-top: 24px;
+    width: calc(100% - 65px);
+    max-width: 360px;
   }
 
   .textContent p {

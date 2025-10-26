@@ -38,7 +38,7 @@ export default function AboutHistory() {
           
           <div className={styles.imageContainer}>
             <img 
-              src=""
+              src="/assets/images/about_history.png"
               alt="Группа женщин поддержки"
               className={styles.image}
             />
